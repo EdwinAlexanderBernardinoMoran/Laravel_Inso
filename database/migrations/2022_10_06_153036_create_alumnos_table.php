@@ -14,7 +14,7 @@ class CreateAlumnosTable extends Migration
     public function up()
     {
         Schema::create('alumnos', function (Blueprint $table) {
-            $table->unsignedBigInteger('nacionalidad_id')->nullable();
+            $table->unsignedBigInteger('nacionalidad_id');
             $table->unsignedBigInteger("departamento_nacimiento_id");
             $table->unsignedBigInteger("municipio_nacimiento_id");
             $table->unsignedBigInteger("especialidad_ingreso_id");
@@ -30,7 +30,7 @@ class CreateAlumnosTable extends Migration
             $table->unsignedBigInteger("municipio_responsable_id");
             $table->unsignedBigInteger("canton_responsable_id");
             $table->unsignedBigInteger("caserio_responsable_id");
-            $table->unsignedBigInteger("tipo_calle_id");
+            $table->unsignedBigInteger("tipo_calle_responsable_id");
             $table->unsignedBigInteger("profesor_revision_id");
 
             
@@ -51,7 +51,6 @@ class CreateAlumnosTable extends Migration
             $table->string('libro_partida');
             $table->string('otro_documento_identificacion');
             $table->string('salvadoreño_por');
-            $table->string('anio_bachillerato');
             $table->foreign("especialidad_ingreso_id")->references("id")->on("especialidades")->onDelete('set null');
             $table->boolean('estudio_parvularia');
             $table->boolean('repite_grado');
@@ -90,7 +89,6 @@ class CreateAlumnosTable extends Migration
             $table->string("nombre_responsable");
             $table->string("apellidos_responsable");
             $table->string("dui_responsable");
-            $table->char("estado_familiar");
             $table->string("email_responsable");
             $table->string("telefono_encargado");
             $table->foreign("zona_responsable_id")->references("id")->on("zonas")->onDelete('set null');
