@@ -14,16 +14,26 @@ class CreateProfesoresTable extends Migration
     public function up()
     {
         Schema::create('profesores', function (Blueprint $table) {
+            $table->unsignedBigInteger("carrera_id");
+            $table->unsignedBigInteger("categoria_id");
+            $table->unsignedBigInteger("cargo_id");
+
+
             $table->id();
-            // $table->string("nombres");
-            // $table->string("apellidos");
-            // $table->string("direccion");
-            // $table->string("dui");
-            // $table->string("nip");
-            // $table->string("nit");
-            // $table->string("nup");
-            // $table->string("");
-            // $table->foreign("carrera_id")->references("id")->on("");
+            $table->string("nombres");
+            $table->string("apellidos");
+            $table->string("direccion");
+            $table->string("dui");
+            $table->string("nip");
+            $table->string("nit");
+            $table->string("nup");
+            $table->foreign("carrera_id")->references("id")->on("carreras")->onDelete("ser null");
+            $table->foreign("categoria_id")->references("id")->on("categorias")->onDelete("ser null");
+            $table->foreign("cargo_id")->references("id")->on("cargos")->onDelete("ser null");
+            $table->string("partida");
+            $table->string("subnivel");
+            $table->string("fecha_ingreso");
+            $table->string("habilitado");
             $table->timestamps();
         });
     }
