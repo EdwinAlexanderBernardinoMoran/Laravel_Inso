@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profesores;
+use App\Models\profesores;
 use Illuminate\Http\Request;
 
 class ProfesoresController extends Controller
@@ -41,10 +41,10 @@ class ProfesoresController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Profesores  $profesores
+     * @param  \App\Models\profesores  $profesores
      * @return \Illuminate\Http\Response
      */
-    public function show(Profesores $profesores)
+    public function show(profesores $profesores)
     {
         //
     }
@@ -52,10 +52,10 @@ class ProfesoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Profesores  $profesores
+     * @param  \App\Models\profesores  $profesores
      * @return \Illuminate\Http\Response
      */
-    public function edit(Profesores $profesores)
+    public function edit(profesores $profesores)
     {
         //
     }
@@ -64,10 +64,10 @@ class ProfesoresController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Profesores  $profesores
+     * @param  \App\Models\profesores  $profesores
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Profesores $profesores)
+    public function update(Request $request, profesores $profesores)
     {
         //
     }
@@ -75,10 +75,10 @@ class ProfesoresController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Profesores  $profesores
+     * @param  \App\Models\profesores  $profesores
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Profesores $profesores)
+    public function destroy(profesores $profesores)
     {
         //
     }

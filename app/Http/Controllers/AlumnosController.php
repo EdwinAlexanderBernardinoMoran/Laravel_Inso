@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Alumnos;
+use App\Models\alumnos;
 use Illuminate\Http\Request;
 
 class AlumnosController extends Controller
@@ -41,10 +41,10 @@ class AlumnosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Alumnos  $alumnos
+     * @param  \App\Models\alumnos  $alumnos
      * @return \Illuminate\Http\Response
      */
-    public function show(Alumnos $alumnos)
+    public function show(alumnos $alumnos)
     {
         //
     }
@@ -52,10 +52,10 @@ class AlumnosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Alumnos  $alumnos
+     * @param  \App\Models\alumnos  $alumnos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alumnos $alumnos)
+    public function edit(alumnos $alumnos)
     {
         //
     }
@@ -64,10 +64,10 @@ class AlumnosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Alumnos  $alumnos
+     * @param  \App\Models\alumnos  $alumnos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alumnos $alumnos)
+    public function update(Request $request, alumnos $alumnos)
     {
         //
     }
@@ -75,10 +75,10 @@ class AlumnosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Alumnos  $alumnos
+     * @param  \App\Models\alumnos  $alumnos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alumnos $alumnos)
+    public function destroy(alumnos $alumnos)
     {
         //
     }

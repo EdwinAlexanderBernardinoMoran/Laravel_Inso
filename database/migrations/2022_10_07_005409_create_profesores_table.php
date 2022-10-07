@@ -27,9 +27,9 @@ class CreateProfesoresTable extends Migration
             $table->string("nip");
             $table->string("nit");
             $table->string("nup");
-            $table->foreign("carrera_id")->references("id")->on("carreras")->onDelete("ser null");
-            $table->foreign("categoria_id")->references("id")->on("categorias")->onDelete("ser null");
-            $table->foreign("cargo_id")->references("id")->on("cargos")->onDelete("ser null");
+            $table->foreign("carrera_id")->references("id")->on("carreras");
+            $table->foreign("categoria_id")->references("id")->on("categorias");
+            $table->foreign("cargo_id")->references("id")->on("cargos");
             $table->string("partida");
             $table->string("subnivel");
             $table->string("fecha_ingreso");
